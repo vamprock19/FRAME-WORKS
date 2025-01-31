@@ -21,6 +21,10 @@ void ofApp::draw()
 	ofSetColor(0, 0, 255);
 	bool isBlue = true;
 
+
+
+	
+
 	for (int y = 200; y <= 400; y += 100)
 	{
 		for (int x = 100; x <= 500; x += 100)
