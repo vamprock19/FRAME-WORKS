@@ -11,7 +11,7 @@ void ofApp::setup()
 
 	for (int i = 0; i < 1; i++)
 	{
-		array <int, 6> arrayList = { 0,0,0,0,0};
+		array <int, 6> arrayList = { 0,0,0,0,0}; /*5*/
 
 		arrayList[0] = rand() % 10 + 1;
 		arrayList[1] = rand() % 10 + 1;
@@ -46,20 +46,24 @@ void ofApp::draw()
 	ofSetColor(0, 0, 255);
 	bool isBlue = true;
 
-
+	srand(time(0));
 
 
 	for (int y = 200; y <= 200; y += 100)
 	{
-		
-		
-			
-			
-				ofSetColor(255, 255, 255);
+		for()
+		array <int, 6> arrayList = { 0,0,0,0,0 }; /*5*/
 
-			
-			
-			ofDrawCircle(20, y, 25); // radius
+		arrayList[0] = rand() % 10 + 1;
+		arrayList[1] = rand() % 10 + 1;
+		arrayList[2] = rand() % 10 + 1;
+		arrayList[3] = rand() % 10 + 1;
+		arrayList[4] = rand() % 10 + 1;
+		
+		ofSetColor(255, 255, 255);
+		/*value x, value y, radius*/
+
+			ofDrawCircle(20, 20, 25); // radius
 		
 	}
 
