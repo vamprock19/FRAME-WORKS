@@ -4,7 +4,32 @@ using namespace std;
 //--------------------------------------------------------------
 void ofApp::setup()
 {
-	cout << "this is the homework" << endl;
+	srand(time(0));
+
+	
+	
+
+	for (int i = 0; i < 1; i++)
+	{
+		array <int, 6> arrayList = { 0,0,0,0,0};
+
+		arrayList[0] = rand() % 10 + 1;
+		arrayList[1] = rand() % 10 + 1;
+		arrayList[2] = rand() % 10 + 1; 
+		arrayList[3] = rand() % 10 + 1;
+		arrayList[4] = rand() % 10 + 1;
+
+		cout << arrayList[0] << endl;
+		cout << arrayList[1] << endl;
+		cout << arrayList[2] << endl;
+		cout << arrayList[3] << endl;
+		cout << arrayList[5] << endl;
+
+	}
+	
+	
+
+	
 }
 
 //--------------------------------------------------------------
@@ -23,9 +48,24 @@ void ofApp::draw()
 
 
 
+
+	for (int y = 200; y <= 200; y += 100)
+	{
+		for (int x = 100; x <= 300; x += 200)
+		{
+			
+			
+				ofSetColor(255, 255, 255);
+
+			
+			
+			ofDrawCircle(x, y, 25); // radius
+		}
+	}
+
 	
 
-	for (int y = 200; y <= 400; y += 100)
+	/*for (int y = 200; y <= 400; y += 100)
 	{
 		for (int x = 100; x <= 500; x += 100)
 		{
@@ -41,7 +81,7 @@ void ofApp::draw()
 			
 			ofDrawCircle(x, y, 50);
 		}
-	}
+	}*/
 	
 }
 
