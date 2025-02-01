@@ -51,16 +51,16 @@ void ofApp::draw()
 
 	for (int y = 200; y <= 200; y += 100)
 	{
-		for (int x = 100; x <= 300; x += 200)
-		{
+		
+		
 			
 			
 				ofSetColor(255, 255, 255);
 
 			
 			
-			ofDrawCircle(x, y, 25); // radius
-		}
+			ofDrawCircle(20, y, 25); // radius
+		
 	}
 
 	
