@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/vampr/Downloads/of_v0.12.0_vs_release/of_v0.12.0_vs_release/apps/myApps/FRAME-WORKS/src",
+      "program": "c:/Users/vampr/Downloads/of_v0.12.0_vs_release/of_v0.12.0_vs_release/apps/myApps/FRAME-WORKS/src/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
