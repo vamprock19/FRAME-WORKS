@@ -78,14 +78,17 @@ void ofApp::keyPressed(int key)
 
 	case'i':
 		// insertion sort
+		insertionSort();
 		break;
 
 	case'm':
 		// merge sort
+		mergeSort();
 		break;
 
 	case'q':
 		//quick sort
+		quickSort();
 		break;
 
 	case'r':
@@ -95,6 +98,7 @@ void ofApp::keyPressed(int key)
 
 	case's':
 		//shuffle using fisher-yates algorithm(bonus)
+		shuffle();
 		break;
 
 	}
