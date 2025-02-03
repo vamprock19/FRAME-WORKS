@@ -14,9 +14,10 @@ void ofApp::setup()
 
 void ofApp::randomNumbers()
 {
+	
 	for (int i = 0; i < 5; i++)
 	{
-		arrayList[i] = rand() % 100 + 10;/*between 100 and 10*/
+		arrayList[i] = rand() % 91 + 10 ;/*between 100 and 10*/
 		cout << arrayList[i] << endl;
 	}
 }
@@ -99,7 +100,7 @@ void ofApp::keyPressed(int key)
 }
 void ofApp::bubbleSort()
 {
-	int n = arrayList.size();
+	int n = arrayList.size(); // it gets the size of the array
 
 	for (int i = 0; i < n - 1; i++) 
 	{
