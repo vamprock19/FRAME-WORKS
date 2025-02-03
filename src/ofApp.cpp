@@ -3,35 +3,17 @@
 using namespace std;
 
 
-class ofApp : public ofBaseApp
-{
-	void setup();
-	void update();
-	void draw();
-	void keyPressed(int key);
-	void keyReleased(int key);
-	void mouseMoved(int x, int y);
-	void mouseDragged(int x, int y, int button);
-	void mousePressed(int x, int y, int button);
-	void mouseReleased(int x, int y, int button);
-	void mouseEntered(int x, int y);
-	void mouseExited(int x, int y);
-	void windowResized(int w, int h);
-	void gotMessage(ofMessage msg);
-	void dragEvent(ofDragInfo dragInfo);
 
-};
-
-
-//--------------------------------------------------------------
 void ofApp::setup()
 {
 	ofSetFrameRate(60);
 	ofSetWindowTitle("Sorting Project");
-	srand(time(0));
+	randomNumbers();
 
-	array <int, 6> arrayList = { 0,0,0,0,0 }; /*5*/
+}
 
+void ofApp::randomNumbers()
+{
 	for (int i = 0; i < 5; i++)
 	{
 		arrayList[i] = rand() % 100 + 10;/*between 100 and 10*/
@@ -48,32 +30,27 @@ void ofApp::update()
 //--------------------------------------------------------------
 void ofApp::draw()
 {
-	/*ofSetColor(255, 255, 0);
-	ofDrawBitmapString("this is the homework!", 100, 100);*/
-	ofSetColor(0, 0, 255);
-	/*bool isBlue = true;*/
 	
-	srand(time(0));
-	array <int, 5> arrayList = { 0,0,0,0,0 }; /*5*/
-
-	float spacing = ofGetWidth() / 6; 
+	ofSetColor(0, 0, 255);
+	float space = ofGetWidth() / 6; 
 	float y = ofGetHeight() / 2;
 
-
-
-
+	
 	for (int i = 0; i < 5; i++)
 	{
-		//  generates 5 random numbers
-		arrayList[i] = rand() % 100 + 10; 
-		float x = (i + 1) * spacing;
+		
+		float x = (i + 1) * space;
 
-		// radius
+
+		if (arrayList[i] > 0)
+		{
+			// radius
 		// prints the circles
-		ofDrawCircle(x, y, arrayList[i]);
+			ofDrawCircle(x, y, arrayList[i]);
+		}
 
 		//white color
-		ofSetColor(255,255,255);
+		ofSetColor(255,255,0);
 
 		// numbers at the center of the circles
 		// draws the circles
@@ -84,24 +61,6 @@ void ofApp::draw()
 
 	}
 		
-	/*for (int y = 200; y <= 400; y += 100)
-	{
-		for (int x = 100; x <= 500; x += 100)
-		{
-			if (isBlue)
-			{
-				ofSetColor(0, 255, 0);
-			}
-			else
-			{
-				ofSetColor(0, 0, 255);
-			}
-			isBlue = !isBlue;
-			
-			ofDrawCircle(x, y, 50);
-		}
-	}*/
-	
 }
 
 //--------------------------------------------------------------
@@ -127,10 +86,7 @@ void ofApp::keyPressed(int key)
 
 	case'r':
 		// regenerate new random numbers
-		for (int i = 0; i < 5; i++)
-		{
-
-		}
+		randomNumbers();
 		break;
 
 	case's':
