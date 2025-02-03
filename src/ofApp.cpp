@@ -31,6 +31,7 @@ void ofApp::update()
 void ofApp::draw()
 {
 	
+
 	ofSetColor(0, 0, 255);
 	float space = ofGetWidth() / 6; 
 	float y = ofGetHeight() / 2;
@@ -99,12 +100,15 @@ void ofApp::keyPressed(int key)
 void ofApp::bubbleSort()
 {
 	int n = arrayList.size();
+
 	for (int i = 0; i < n - 1; i++) 
 	{
-		for (int j = 0; j < n - i - 1; j++)
+		for (int k = 0; k < n - i - 1; k++)
 		{
-			if (arrayList[j] > arrayList[j + 1]) {
-				swap(arrayList[j], arrayList[j + 1]); // Swap elements
+			if (arrayList[k] > arrayList[k + 1]) 
+			{
+				// mnor a mayor
+				swap(arrayList[k], arrayList[k + 1]); 
 			}
 		}
 	}

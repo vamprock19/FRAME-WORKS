@@ -3,6 +3,9 @@
 #include "ofMain.h"
 #include<array>
 
+
+/*I used AI to help me understand how to create and use methods in
+this project*/
 class ofApp : public ofBaseApp
 {
 
