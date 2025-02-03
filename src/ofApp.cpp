@@ -70,6 +70,7 @@ void ofApp::keyPressed(int key)
 	{
 	case 'b':
 		// bubble sort
+		bubbleSort();
 		break;
 
 	case'i':
@@ -95,7 +96,19 @@ void ofApp::keyPressed(int key)
 
 	}
 }
-
+void ofApp::bubbleSort()
+{
+	int n = arrayList.size();
+	for (int i = 0; i < n - 1; i++) 
+	{
+		for (int j = 0; j < n - i - 1; j++)
+		{
+			if (arrayList[j] > arrayList[j + 1]) {
+				swap(arrayList[j], arrayList[j + 1]); // Swap elements
+			}
+		}
+	}
+}
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key)
 {

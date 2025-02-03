@@ -24,5 +24,6 @@ class ofApp : public ofBaseApp
 		void gotMessage(ofMessage msg);
 		void randomNumbers();
 		std::array <int, 6> arrayList;/*5*/
+		void bubbleSort();
 		
 };
