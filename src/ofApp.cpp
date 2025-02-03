@@ -22,6 +22,7 @@ void ofApp::randomNumbers()
 	}
 }
 
+
 //--------------------------------------------------------------
 void ofApp::update()
 {
@@ -113,6 +114,22 @@ void ofApp::bubbleSort()
 			}
 		}
 	}
+}
+void ofApp::insertionSort()
+{
+
+}
+void ofApp::mergeSort()
+{
+
+}
+void ofApp::quickSort()
+{
+
+}
+void ofApp::shuffle()
+{
+
 }
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key)

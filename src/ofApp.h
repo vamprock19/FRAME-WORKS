@@ -28,5 +28,9 @@ class ofApp : public ofBaseApp
 		void randomNumbers();
 		std::array <int, 6> arrayList;/*5*/
 		void bubbleSort();
+		void insertionSort();
+		void mergeSort();
+		void quickSort();
+		void shuffle();
 		
 };
