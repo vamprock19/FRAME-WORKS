@@ -105,11 +105,11 @@ void ofApp::keyPressed(int key)
 }
 void ofApp::bubbleSort()
 {
-	int n = arrayList.size(); // it gets the size of the array
+	int bubble = arrayList.size(); // it gets the size of the array
 
-	for (int i = 0; i < n - 1; i++) 
+	for (int i = 0; i < bubble - 1; i++) 
 	{
-		for (int k = 0; k < n - i - 1; k++)
+		for (int k = 0; k < bubble - i - 1; k++)
 		{
 			if (arrayList[k] > arrayList[k + 1]) 
 			{
@@ -121,15 +121,102 @@ void ofApp::bubbleSort()
 }
 void ofApp::insertionSort()
 {
+	int insertion = arrayList.size();
+	for (int i = 0; i < insertion; i++)
+	{
+		int sort = arrayList[i];
 
+		int number = i - 1;
+		while (number >= 0 && arrayList[number] > sort)
+		{
+			arrayList[number + 1] = arrayList[number];
+
+			number -= 1;
+		}
+
+		arrayList[number + 1];
+	}
 }
 void ofApp::mergeSort()
 {
+	/*I used the help of AI in this section because mergeSorting elements
+	was difficult also I discovered 2 new methods I can use in vector classes*/
+	int number = arrayList.size();
+
+	if (number <= 1)
+	{
+		return;
+	}
+
+	// 2 halfs
+
+	
+	int half = number / 2;
+
+	
+
+	// Merge the two halves
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	\
+	vector<int> L(arrayList.begin(), arrayList.begin() + half);
+	vector<int> R(arrayList.begin() + half, arrayList.end());
+
+	while (i < L.size() && j < R.size()) 
+	{
+		if (L[i] < R[j]) 
+		{
+			arrayList[k++] = L[i++];
+		}
+		else 
+		{
+			arrayList[k++] = R[j++];
+		}
+	}
+
+	 
+
+	while (i < L.size()) 
+	{
+		arrayList[k++] = L[i++];
+	}
+
+	while (j < R.size()) 
+	{
+		arrayList[k++] = R[j++];
+	}
+
 
 }
 void ofApp::quickSort()
 {
+	int number = 0;
 
+	int alto = arrayList.size() - 1;
+
+
+
+	while (number < alto)
+	{
+		int p = arrayList[alto]; 
+		int i = number;
+
+		for (int j = number; j < alto; j++)
+		{
+			if (arrayList[j] < p)
+			{
+				swap(arrayList[i], arrayList[j]);
+				i++;
+			}
+		}
+		// method which swaps
+		swap(arrayList[i], arrayList[alto]); 
+
+
+		// it sorts
+		alto = i - 1; 
+	}
 }
 void ofApp::shuffle()
 {
