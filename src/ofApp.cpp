@@ -159,7 +159,7 @@ void ofApp::mergeSort()
 	int i = 0;
 	int j = 0;
 	int k = 0;
-	\
+	
 	vector<int> L(arrayList.begin(), arrayList.begin() + half);
 	vector<int> R(arrayList.begin() + half, arrayList.end());
 
